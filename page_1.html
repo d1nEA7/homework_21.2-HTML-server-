@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Главная</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .page-layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Боковое меню */
+        .sidebar {
+            width: 220px;
+            min-width: 220px;
+            min-height: 100vh;
+            background-color: #212529;
+            color: white;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar h5 {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #ddd;
+            text-decoration: none;
+            padding: 7px 8px;
+            border-radius: 4px;
+            margin-bottom: 3px;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background-color: #0d6efd;
+            color: white;
+        }
+
+        .sidebar a i {
+            margin-right: 7px;
+        }
+
+        .sidebar-bottom {
+            margin-top: auto;
+        }
+
+        /* Основная часть */
+        .main-content {
+            flex: 1;
+            min-width: 0;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .main-content h1 {
+            font-size: 32px;
+        }
+
+        .description {
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* Карточки товаров */
+        .products {
+            margin-top: 30px;
+        }
+
+        .product-card {
+            max-width: 260px;
+            margin: 0 auto;
+        }
+
+        .product-card .card-header {
+            font-weight: 500;
+        }
+
+        .product-card .card-title {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .product-card .card-text {
+            font-size: 12px;
+        }
+
+        .product-card .btn {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page-layout">
+
+    <!-- Боковое меню -->
+    <aside class="sidebar">
+
+        <h5>
+            <i class="bi bi-list"></i>
+            Меню
+        </h5>
+
+        <nav>
+
+            <a href="page_1.html" class="active">
+                <i class="bi bi-house-door"></i>
+                Главная
+            </a>
+
+            <a href="page_2.html">
+                <i class="bi bi-grid"></i>
+                Категории
+            </a>
+
+            <a href="page_3.html">
+                <i class="bi bi-calendar"></i>
+                Заказы
+            </a>
+
+            <a href="page_4.html">
+                <i class="bi bi-person"></i>
+                Контакты
+            </a>
+
+        </nav>
+
+        <!-- Нижняя часть меню -->
+        <div class="sidebar-bottom">
+
+            <a href="#">
+                <i class="bi bi-person"></i>
+                Профиль
+            </a>
+
+            <a href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                Выход
+            </a>
+
+            <hr>
+
+            <div>
+                <i class="bi bi-person-circle"></i>
+                Пользователь
+                <i class="bi bi-chevron-down"></i>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Основная часть -->
+    <main class="main-content">
+
+        <h1>Главная</h1>
+
+        <p class="description">
+            Вы находитесь на сайте, предназначенном для продажи товаров.
+        </p>
+
+
+        <!-- Карточки товаров -->
+        <div class="row products">
+
+            <!-- Товар 1 -->
+            <div class="col-md-4 mb-4">
+
+                <div class="card product-card text-bg-light">
+
+                    <div class="card-header">
+                        Товар 1
+                    </div>
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            $ 100
+                        </h5>
+
+                        <p class="card-text">
+                            10 users included, 2 GB of storage,
+                            Email support, Help center access
+                        </p>
+
+                        <button class="btn btn-outline-primary w-100">
+                            Купить
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Товар 2 -->
+            <div class="col-md-4 mb-4">
+
+                <div class="card product-card text-bg-light">
+
+                    <div class="card-header">
+                        Товар 2
+                    </div>
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            $ 100
+                        </h5>
+
+                        <p class="card-text">
+                            10 users included, 2 GB of storage,
+                            Email support, Help center access
+                        </p>
+
+                        <button class="btn btn-outline-primary w-100">
+                            Купить
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Товар 3 -->
+            <div class="col-md-4 mb-4">
+
+                <div class="card product-card text-bg-light">
+
+                    <div class="card-header">
+                        Товар 3
+                    </div>
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            $ 100
+                        </h5>
+
+                        <p class="card-text">
+                            10 users included, 2 GB of storage,
+                            Email support, Help center access
+                        </p>
+
+                        <button class="btn btn-outline-primary w-100">
+                            Купить
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

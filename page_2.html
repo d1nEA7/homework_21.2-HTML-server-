@@ -3,369 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Каталог</title>
-
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
-        body {
-            margin: 0;
-            font-size: 14px;
-        }
-
-        .page-layout {
-            display: flex;
-            min-height: 100vh;
-        }
-
-        /* Боковое меню */
+        body { margin: 0; font-size: 14px; }
+        .page-layout { display: flex; min-height: 100vh; }
         .sidebar {
-            width: 220px;
-            min-width: 220px;
-            min-height: 100vh;
-            background-color: #212529;
-            color: white;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
+            width: 220px; min-width: 220px; min-height: 100vh;
+            background-color: #212529; color: white; padding: 10px;
+            display: flex; flex-direction: column;
         }
-
-        .sidebar h5 {
-            margin-bottom: 10px;
-        }
-
+        .sidebar h5 { margin-bottom: 10px; }
         .sidebar a {
-            display: block;
-            color: #ddd;
-            text-decoration: none;
-            padding: 7px 8px;
-            border-radius: 4px;
-            margin-bottom: 3px;
+            display: block; color: #ddd; text-decoration: none;
+            padding: 7px 8px; border-radius: 4px; margin-bottom: 3px;
         }
-
-        .sidebar a:hover,
-        .sidebar a.active {
-            background-color: #0d6efd;
-            color: white;
-        }
-
-        .sidebar a i {
-            margin-right: 7px;
-        }
-
-        .sidebar-bottom {
-            margin-top: auto;
-        }
-
-        /* Основная часть */
-        .main-content {
-            flex: 1;
-            min-width: 0;
-            padding: 40px 30px;
-        }
-
-        .main-content h1 {
-            text-align: center;
-            font-size: 32px;
-            margin-bottom: 30px;
-        }
-
-        /* Каталог */
-        .catalog {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .catalog-card {
-            height: 100%;
-        }
-
+        .sidebar a:hover, .sidebar a.active { background-color: #0d6efd; color: white; }
+        .sidebar a i { margin-right: 7px; }
+        .sidebar-bottom { margin-top: auto; }
+        .main-content { flex: 1; min-width: 0; padding: 40px 30px; }
+        .main-content h1 { text-align: center; font-size: 32px; margin-bottom: 30px; }
+        .catalog { max-width: 800px; margin: 0 auto; }
+        .catalog-card { height: 100%; }
         .thumbnail {
-            height: 150px;
-            background-color: #5b6065;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height: 150px; background-color: #5b6065; color: white;
+            display: flex; align-items: center; justify-content: center;
         }
-
-        .catalog-card .card-body {
-            padding: 10px;
-        }
-
-        .catalog-card .card-text {
-            font-size: 12px;
-            margin-bottom: 8px;
-        }
-
-        .card-footer-custom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .card-buttons button {
-            font-size: 10px;
-            padding: 2px 6px;
-        }
-
-        .time {
-            font-size: 11px;
-            color: #777;
-        }
+        .catalog-card .card-body { padding: 10px; }
+        .catalog-card .card-text { font-size: 12px; margin-bottom: 8px; }
+        .card-footer-custom { display: flex; justify-content: space-between; align-items: center; }
+        .card-buttons button { font-size: 10px; padding: 2px 6px; }
+        .time { font-size: 11px; color: #777; }
+        footer { text-align: center; padding: 20px; color: #777; font-size: 13px; }
     </style>
 </head>
-
 <body>
-
 <div class="page-layout">
-
-    <!-- Боковое меню -->
     <aside class="sidebar">
-
-        <h5>
-            <i class="bi bi-list"></i>
-            Меню
-        </h5>
-
+        <h5><i class="bi bi-list"></i> Меню</h5>
         <nav>
-
-            <a href="page_1.html">
-                <i class="bi bi-house-door"></i>
-                Главная
-            </a>
-
-            <a href="page_2.html" class="active">
-                <i class="bi bi-grid"></i>
-                Категории
-            </a>
-
-            <a href="page_3.html">
-                <i class="bi bi-calendar"></i>
-                Заказы
-            </a>
-
-            <a href="page_4.html">
-                <i class="bi bi-person"></i>
-                Контакты
-            </a>
-
+            <a href="page_1.html" class="active"><i class="bi bi-house-door"></i> Главная</a>
+            <a href="page_2.html"><i class="bi bi-grid"></i> Категории</a>
+            <a href="page_3.html"><i class="bi bi-calendar"></i> Заказы</a>
+            <a href="page_4.html"><i class="bi bi-person"></i> Контакты</a>
         </nav>
-
-        <!-- Нижняя часть меню -->
         <div class="sidebar-bottom">
-
-            <a href="#">
-                <i class="bi bi-person"></i>
-                Профиль
-            </a>
-
-            <a href="#">
-                <i class="bi bi-box-arrow-right"></i>
-                Выход
-            </a>
-
             <hr>
-
-            <div>
-                <i class="bi bi-person-circle"></i>
-                Пользователь
-                <i class="bi bi-chevron-down"></i>
+            <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-circle me-2"></i> Пользователь
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Профиль</a></li>
+                    <li><a class="dropdown-item" href="#">Выход</a></li>
+                </ul>
             </div>
-
         </div>
-
     </aside>
 
-
-    <!-- Основная часть -->
     <main class="main-content">
-
         <h1>Каталог</h1>
 
         <div class="container catalog">
-
             <div class="row g-4">
 
                 <!-- Карточка 1 -->
                 <div class="col-md-6">
-
                     <div class="card catalog-card">
-
-                        <div class="thumbnail">
-                            Thumbnail
-                        </div>
-
+                        <div class="thumbnail">Thumbnail</div>
                         <div class="card-body">
-
                             <p class="card-text">
                                 This is a wider card with supporting text below as a
                                 natural lead-in to additional content. This content
                                 is a little bit longer.
                             </p>
-
                             <div class="card-footer-custom">
-
                                 <div class="card-buttons">
-                                    <button class="btn btn-outline-secondary">
-                                        View
-                                    </button>
-
-                                    <button class="btn btn-outline-secondary">
-                                        Edit
-                                    </button>
+                                    <button class="btn btn-outline-secondary">View</button>
+                                    <button class="btn btn-outline-secondary">Edit</button>
                                 </div>
-
-                                <span class="time">
-                                    9 mins
-                                </span>
-
+                                <span class="time">9 mins</span>
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
 
                 <!-- Карточка 2 -->
                 <div class="col-md-6">
-
                     <div class="card catalog-card">
-
-                        <div class="thumbnail">
-                            Thumbnail
-                        </div>
-
+                        <div class="thumbnail">Thumbnail</div>
                         <div class="card-body">
-
                             <p class="card-text">
                                 This is a wider card with supporting text below as a
                                 natural lead-in to additional content. This content
                                 is a little bit longer.
                             </p>
-
                             <div class="card-footer-custom">
-
                                 <div class="card-buttons">
-                                    <button class="btn btn-outline-secondary">
-                                        View
-                                    </button>
-
-                                    <button class="btn btn-outline-secondary">
-                                        Edit
-                                    </button>
+                                    <button class="btn btn-outline-secondary">View</button>
+                                    <button class="btn btn-outline-secondary">Edit</button>
                                 </div>
-
-                                <span class="time">
-                                    9 mins
-                                </span>
-
+                                <span class="time">9 mins</span>
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
 
                 <!-- Карточка 3 -->
                 <div class="col-md-6">
-
                     <div class="card catalog-card">
-
-                        <div class="thumbnail">
-                            Thumbnail
-                        </div>
-
+                        <div class="thumbnail">Thumbnail</div>
                         <div class="card-body">
-
                             <p class="card-text">
                                 This is a wider card with supporting text below as a
                                 natural lead-in to additional content. This content
                                 is a little bit longer.
                             </p>
-
                             <div class="card-footer-custom">
-
                                 <div class="card-buttons">
-                                    <button class="btn btn-outline-secondary">
-                                        View
-                                    </button>
-
-                                    <button class="btn btn-outline-secondary">
-                                        Edit
-                                    </button>
+                                    <button class="btn btn-outline-secondary">View</button>
+                                    <button class="btn btn-outline-secondary">Edit</button>
                                 </div>
-
-                                <span class="time">
-                                    9 mins
-                                </span>
-
+                                <span class="time">9 mins</span>
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
 
                 <!-- Карточка 4 -->
                 <div class="col-md-6">
-
                     <div class="card catalog-card">
-
-                        <div class="thumbnail">
-                            Thumbnail
-                        </div>
-
+                        <div class="thumbnail">Thumbnail</div>
                         <div class="card-body">
-
                             <p class="card-text">
                                 This is a wider card with supporting text below as a
                                 natural lead-in to additional content. This content
                                 is a little bit longer.
                             </p>
-
                             <div class="card-footer-custom">
-
                                 <div class="card-buttons">
-                                    <button class="btn btn-outline-secondary">
-                                        View
-                                    </button>
-
-                                    <button class="btn btn-outline-secondary">
-                                        Edit
-                                    </button>
+                                    <button class="btn btn-outline-secondary">View</button>
+                                    <button class="btn btn-outline-secondary">Edit</button>
                                 </div>
-
-                                <span class="time">
-                                    9 mins
-                                </span>
-
+                                <span class="time">9 mins</span>
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
 
             </div>
-
         </div>
-
     </main>
-
 </div>
 
+<footer>© 2025 Lorem blog. Все права защищены.</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

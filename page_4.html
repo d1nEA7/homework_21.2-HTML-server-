@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Контакты</title>
+
+    <!-- Bootstrap CSS с CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons с CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body { margin: 0; font-size: 14px; }
+        .page-layout { display: flex; min-height: 100vh; }
+        .sidebar {
+            width: 220px; min-width: 220px; min-height: 100vh;
+            background-color: #212529; color: white; padding: 10px;
+            display: flex; flex-direction: column;
+        }
+        .sidebar h5 { margin-bottom: 10px; }
+        .sidebar a {
+            display: block; color: #ddd; text-decoration: none;
+            padding: 7px 8px; border-radius: 4px; margin-bottom: 3px;
+        }
+        .sidebar a:hover, .sidebar a.active { background-color: #0d6efd; color: white; }
+        .sidebar a i { margin-right: 7px; }
+        .sidebar-bottom { margin-top: auto; }
+        .main-content { flex: 1; min-width: 0; padding: 40px 30px; }
+        .main-content h1 { text-align: center; font-size: 32px; margin-bottom: 40px; }
+        .contact-form {
+            border: 1px solid #dee2e6; border-radius: 6px;
+            padding: 20px; background-color: #fff;
+        }
+        .contact-form .form-label { font-weight: 500; }
+        .contact-info h3 { font-size: 22px; margin-bottom: 15px; }
+        .contact-info p { font-size: 14px; color: #333; line-height: 1.6; }
+        footer { text-align: center; padding: 20px; color: #777; font-size: 13px; }
+    </style>
+</head>
+<body>
+<div class="page-layout">
+    <aside class="sidebar">
+        <h5><i class="bi bi-list"></i> Меню</h5>
+        <nav>
+            <a href="page_1.html"><i class="bi bi-house-door"></i> Главная</a>
+            <a href="page_2.html"><i class="bi bi-grid"></i> Категории</a>
+            <a href="page_3.html"><i class="bi bi-calendar"></i> Заказы</a>
+            <a href="page_4.html" class="active"><i class="bi bi-person"></i> Контакты</a>
+        </nav>
+        <div class="sidebar-bottom">
+            <hr>
+            <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-circle me-2"></i> Пользователь
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Профиль</a></li>
+                    <li><a class="dropdown-item" href="#">Выход</a></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <h1>Контакты</h1>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6 mb-4">
+                <div class="contact-form">
+                    <form action="/" method="post">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Имя</label>
+                            <input type="text" class="form-control" id="name" name="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Почта</label>
+                            <div class="input-group">
+                                <span class="input-group-text">@</span>
+                                <input type="email" class="form-control" id="email" name="email">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Сообщение</label>
+                            <textarea class="form-control" id="message" rows="4" name="message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-5 contact-info">
+                <h3>Наши контакты</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat.
+                </p>
+                <p>
+                    While these feedback styles cannot be styled with CSS, you can still
+                    customize the feedback text through JavaScript.
+                </p>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>© 2025 Lorem blog. Все права защищены.</footer>
+
+<!-- Bootstrap JS с CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

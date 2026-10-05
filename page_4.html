@@ -70,22 +70,24 @@
         <div class="row justify-content-center">
             <div class="col-md-6 mb-4">
                 <div class="contact-form">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Имя</label>
-                        <input type="text" class="form-control" id="name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Почта</label>
-                        <div class="input-group">
-                            <span class="input-group-text">@</span>
-                            <input type="email" class="form-control" id="email">
+                    <form action="/" method="post">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Имя</label>
+                            <input type="text" class="form-control" id="name" name="name">
                         </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Сообщение</label>
-                        <textarea class="form-control" id="message" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Отправить</button>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Почта</label>
+                            <div class="input-group">
+                                <span class="input-group-text">@</span>
+                                <input type="email" class="form-control" id="email" name="email">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Сообщение</label>
+                            <textarea class="form-control" id="message" rows="4" name="message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </form>
                 </div>
             </div>
 
